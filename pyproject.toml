@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cunit-to-junit"
+version = "0.1.0"
+description = "Convert CUnit XML reports to JUnit XML format"
+readme = "README.md"
+license = "AGPL-3.0-only"
+requires-python = ">=3.10"
+authors = [
+    { name = "Kardo Marof", email = "kardo.m99@proton.me" },
+]
+keywords = ["cunit", "junit", "xml", "test", "converter", "report"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = [
+    "lxml>=4.9",
+    "junitparser>=3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/cunit-to-junit"
+Repository = "https://github.com/yourusername/cunit-to-junit"
+Issues = "https://github.com/yourusername/cunit-to-junit/issues"
+
+[project.scripts]
+cunit-to-junit = "cunit_to_junit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
